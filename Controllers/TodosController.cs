@@ -7,8 +7,9 @@ namespace dotNetTodoReview.Controllers
 {
     public class TodosController
     {
-        [Route("api/[controller]")]
         [ApiController]
+        [Route("api/[controller]")]
+
 
         public class ToDosController : ControllerBase
         {
@@ -33,7 +34,7 @@ namespace dotNetTodoReview.Controllers
             }
 
             // POST api/<ToDosController>
-            [HttpPost]
+            [HttpPost("todos")]
             public ToDoModel Post([FromBody] ToDoModel todo)
             {
                 var postToDoService = new PostToDoService();
